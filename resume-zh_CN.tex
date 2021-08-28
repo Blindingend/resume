@@ -13,80 +13,72 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{你的大名}
+\name{鄢新}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
- 
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+  \email{blindingend@foxmail.com} \textperiodcentered\ 
+  \phone{(+86) 131-6709-8676} \textperiodcentered\ 
+  \github[Blindingend]{https://github.com/Blindingend}}
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
+\section{教育经历}
+\datedsubsection{\textbf{上海交通大学}, 中国, 上海}{2016.09 -- 2020.09}
+\textit{} 电子信息与电气工程学院，软件工程
+
+\section{专业技能}
 \begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
+\item 主要使用 Python，熟练使用 C++，熟悉 Linux 和命令行环境
+\item 熟练使用 Git 进行代码管理，熟悉 Airflow, Prometheus, Grafana 等调度及监控工具
 \end{itemize}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
-\begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
+\section{工作经历}
+
+\datedsubsection{\textbf{上海锐天投资管理有限公司}}{2019.7 - 2020.6}
+\role{运维开发实习生 交易组}\
 \begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
+\item 负责消息队列及 IO 库的调查、测试与对比，以解决之前使用的 nanomsg 的丢包问题。
+对比了 Kafka, RabbitMQ, ZeroMQ, Asio, libuv, libevent 在小包收发的功能及性能, 
+并最终选定了 asio 作为内部消息传输库.
+\item 负责开发内部使用的手工 T0 交易软件及相关风控服务，以支持手工 T0 业务。
+提供了所需的交易功能及风控管理功能，支持了亿级别交易量的交易服务。
 \end{itemize}
-\end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
-\begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\datedsubsection{\textbf{上海锐天投资管理有限公司}}{2020.7 - 至今}
+\role{运维开发工程师 交易组}\
 \begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
-\end{itemize}
-\end{onehalfspacing}
+\item 负责行情服务、相应的监控及衍生的工具的开发及日常运维。
+ 行情服务为线上交易服务及日常研发提供支持，接入了多家券商的股票、期货及期权的不同行情，每日录入亿级别条数的行情信息。
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\item 开发及运维期货主观交易服务，包括 Windows 端交易软件及后端服务。
+服务为数位主观交易 PM 提供交易支持，稳定运行超过一年并根据需求进行了数次迭代，完成了超过五十亿的交易。
 
-\section{\faCogs\ IT 技能}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+\item 负责期货 CTA 分钟级策略回测及实盘框架的开发及策略的线上运维。
+支持了多个分钟级策略的研发，以及天级别到分钟级的十多个策略的顺利上线运行，策略交易规模超过十亿。
+
+\item 开发及运维数字货币交易及风控服务，市价单交易小时级策略，实时监控盈亏，及时清仓止损避免出现超额亏损。
+服务稳定运行了两个季度，在正式的交易服务上线前及时提供了过渡的交易支持，策略规模超过千万 USDT.
+
 \end{itemize}
 
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
-
-\section{\faInfo\ 其他}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+\section{项目经历}
+\datedsubsection{\textbf{期货主观交易软件}|VNPY, Tornado, Python, MMap, Pybind, Redis}{2020.9 - 2020.10}
+\begin{itemize}
+\item 基于 vnpy 开发供期货主观交易的交易软件，支持期货买卖开平的限价及市价单的下撤单、当个交易日的价格及时间条件单以及实时的仓位及订单状态显示功能。
+\item 基于 Tornado 开发 Server 端，管理不同交易员账户的订单，对大笔订单进行拆分，下发至交易系统。
+对接交易系统的返回信息，推送仓位及订单信息的更新到客户端。
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+\datedsubsection{\textbf{行情服务}|c++, MemoryMap, python, pybind, Redis  }{2020.9 - 2020.10}
+\begin{itemize}
+\item 基于 vnpy 开发供期货主观交易的交易软件，支持期货买卖开平的限价及市价单的下撤单、当个交易日的价格及时间条件单以及实时的仓位及订单状态显示功能。
+\item 基于 Tornado 开发 Server 端，管理不同交易员账户的订单，对大笔订单进行拆分，下发至交易系统。
+对接交易系统的返回信息，推送仓位及订单信息的更新到客户端。
+\end{itemize}
+
+\datedsubsection{\textbf{数字货币交易及风控服务}|Python, ccxt, prometheus, grafana}{2021.3 - 2021.4}
+\begin{itemize}
+\item 数字货币的市价单交易服务，接受策略信号，根据预测的交易量进行多轮 TWAP 交易到信号指定仓位。
+\item 实时的账户信息监测服务，将盈亏及成交状态实时上报 Promethues，使用 slack 报警，grafana 展示详细情况。
+\end{itemize}
+
+
 \end{document}
