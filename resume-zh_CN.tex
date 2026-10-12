@@ -17,8 +17,8 @@
 
 \basicInfo{
   \email{blindingend@foxmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-6709-8676} \textperiodcentered\ 
-  \github[Blindingend]{https://github.com/Blindingend}}
+  \phone{(+86) 131-6709-8676} \textperiodcentered\ }
+%  \github[Blindingend]{https://github.com/Blindingend}}
 
 \section{教育经历}
 \datedsubsection{\textbf{上海交通大学}, 中国, 上海}{2016.09 -- 2020.09}
@@ -26,59 +26,53 @@
 
 \section{专业技能}
 \begin{itemize}
-\item 主要使用 Python，熟练使用 C++，熟悉 Linux 和命令行环境
-\item 熟练使用 Git 进行代码管理，熟悉 Airflow, Prometheus, Grafana 等调度及监控工具
+\item 熟练使用 C++ 及 Python 进行开发，拥有良好的代码风格。熟练使用 Git 进行代码管理
+\item 熟练使用 profile 工具对程序进行性能及内存使用定位，对热点部分进行优化
+\item 熟悉 Linux 和命令行环境
+\item 熟悉 Airflow, Prometheus, Grafana 等调度及监控工具
 \end{itemize}
 
 \section{工作经历}
 
-\datedsubsection{\textbf{上海锐天投资管理有限公司}}{2019.7 - 2020.6}
-\role{运维开发实习生 交易组}\
+\datedsubsection{\textbf{上海锐天投资管理有限公司}}{2019.7 - 至今}
+\role{交易系统开发工程师-交易组}\
 \begin{itemize}
-\item 负责消息队列及 IO 库的调查、测试与对比，以解决之前使用的 nanomsg 的丢包问题。
-对比了 Kafka, RabbitMQ, ZeroMQ, Asio, libuv, libevent 在小包收发的功能及性能, 
-并最终选定了 asio 作为内部消息传输库.
-\item 负责开发内部使用的手工 T0 交易软件及相关风控服务，以支持手工 T0 业务。
-提供了所需的交易功能及风控管理功能，支持了亿级别交易量的交易服务。
+\item 负责现有交易系统部分模块的功能开发及性能优化
+
+\item 负责线上行情服务，包括券商行情服务对接，本地行情服务转发以及本地订单簿的重建。
+
+\item 支持商品期货业务，开发期货主观交易软件，支持期货 cta 策略的上线。
+
+\item 开发及运维数字货币行情、交易及风控服务。
+
 \end{itemize}
 
-\datedsubsection{\textbf{上海锐天投资管理有限公司}}{2020.7 - 至今}
-\role{运维开发工程师 交易组}\
-\begin{itemize}
-\item 负责行情服务、相应的监控及衍生的工具的开发及日常运维。
- 行情服务为线上交易服务及日常研发提供支持，接入了多家券商的股票、期货及期权的不同行情，每日录入亿级别条数的行情信息。
-
-\item 开发及运维期货主观交易服务，包括 Windows 端交易软件及后端服务。
-服务为数位主观交易 PM 提供交易支持，稳定运行超过一年并根据需求进行了数次迭代，完成了超过五十亿的交易。
-
-\item 负责期货 CTA 分钟级策略回测及实盘框架的开发及策略的线上运维。
-支持了多个分钟级策略的研发，以及天级别到分钟级的十多个策略的顺利上线运行，策略交易规模超过十亿。
-
-\item 开发及运维数字货币交易及风控服务，市价单交易小时级策略，实时监控盈亏，及时清仓止损避免出现超额亏损。
-服务稳定运行了两个季度，在正式的交易服务上线前及时提供了过渡的交易支持，策略规模超过千万 USDT.
-
-\end{itemize}
 
 \section{项目经历}
-\datedsubsection{\textbf{期货主观交易软件}|VNPY, Tornado, Python, MMap, Pybind, Redis}{2020.9 - 2020.10}
+\subsection{\textbf{交易系统开发}|c++, MemoryMap, Protobuf}
 \begin{itemize}
-\item 基于 vnpy 开发供期货主观交易的交易软件，支持期货买卖开平的限价及市价单的下撤单、当个交易日的价格及时间条件单以及实时的仓位及订单状态显示功能。
-\item 基于 Tornado 开发 Server 端，管理不同交易员账户的订单，对大笔订单进行拆分，下发至交易系统。
-对接交易系统的返回信息，推送仓位及订单信息的更新到客户端。
+\item 负责现有交易系统性能优化，对相关模块进行 cpu 及内存占用 profile，定位及优化具体问题。例如优化原有行情 Snapshot 的档位扫描逻辑，减少频繁扫描带来额外的性能开销。
+\item 交易系统的功能开发和现有功能改进。参与开发流处理计算框架，支持 feature 的离线 research 及线上生成。
 \end{itemize}
 
-\datedsubsection{\textbf{行情服务}|c++, MemoryMap, python, pybind, Redis  }{2020.9 - 2020.10}
+\subsection{\textbf{行情服务}|C++, MemoryMap, Python, Pybind, Redis}
 \begin{itemize}
-\item 基于 vnpy 开发供期货主观交易的交易软件，支持期货买卖开平的限价及市价单的下撤单、当个交易日的价格及时间条件单以及实时的仓位及订单状态显示功能。
-\item 基于 Tornado 开发 Server 端，管理不同交易员账户的订单，对大笔订单进行拆分，下发至交易系统。
-对接交易系统的返回信息，推送仓位及订单信息的更新到客户端。
+\item 开发 C++ 程序对接多家券商（交易所）的股票、指数及期货行情，将行情写入 Memory Map 文件，让下游服务能够低延迟地接受数据，同时完成数据的持久化。
+\item 负责行情本地订单簿的重建。从沪深逐笔行情重建本地订单簿，使得下游能够访问到 tick 级别的订单簿数据。
+\item 开发线上实时延迟监控，盘后延迟分析等服务，把控行情质量。
 \end{itemize}
 
-\datedsubsection{\textbf{数字货币交易及风控服务}|Python, ccxt, prometheus, grafana}{2021.3 - 2021.4}
+\subsection{\textbf{数字货币交易及风控服务}|Python, CCXT, Prometheus, Grafana}
 \begin{itemize}
-\item 数字货币的市价单交易服务，接受策略信号，根据预测的交易量进行多轮 TWAP 交易到信号指定仓位。
-\item 实时的账户信息监测服务，将盈亏及成交状态实时上报 Promethues，使用 slack 报警，grafana 展示详细情况。
+\item 数字货币的市价单交易服务，接受策略信号，根据预测的交易量进行多轮 TWAP 交易到指定仓位。
+\item 对接 Binance, FTX, MEXC 等交易所的交易及行情服务。
+\item 实时账户信息监测服务，将盈亏及成交状态实时上报 Promethues，使用飞书及电话报警，Grafana 展示详细情况。
 \end{itemize}
 
+\subsection{\textbf{期货主观交易软件}|VNPY, Tornado, Python, MMap, Pybind, Redis}
+\begin{itemize}
+\item 基于 vnpy 开发期货主观交易软件，支持期货的限价单、市价单及条件单。
+\item 基于 Tornado 开发 Server 端，管理不同交易员账户的订单，对接至已有交易系统服务。
+\end{itemize}
 
 \end{document}

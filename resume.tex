@@ -1,80 +1,76 @@
-% !TEX program = xelatex
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
 
 \documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{NotoSansSC_external}
+% \usepackage{NotoSerifCJKsc_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\name{Yan Xin}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{blindingend@foxmail.com} \textperiodcentered\ 
+  \phone{(+86) 131-6709-8676} \textperiodcentered\ 
+  \github[Blindingend]{https://github.com/Blindingend}}
 
-\section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\section{Education}
+\datedsubsection{\textbf{Shanghai Jiao Tong University}, Shanghai, China}{2016.09 -- 2020.09}
+\textit{B.S.} in Software Engineering
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\section{Skills}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+\item Proficient in C++ and Python development with a strong coding style.
+\item Experienced in using Git for code management.
+\item Skilled in profiling tools for performance and memory usage analysis, optimizing hotspots effectively.
+\item Familiar with Linux and command-line environments.
+\item Knowledgeable in scheduling and monitoring tools such as Airflow, Prometheus, and Grafana.
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\section{Experience}
+
+\datedsubsection{\textbf{Ruitian Capital} Shanghai, China}{2020.7 - Present}
+\role{Trading Platform Developer}\
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+\item Responsible for functional development and performance optimization of existing trading system modules.
+\item Develop online market data services, including broker market data integration, local data service forwarding, and local order book reconstruction.
+\item Support commodity futures business by developing subjective trading software and implementing futures CTA strategies.
+\item Develop and maintain digital currency market data, trading, and risk control services.
+
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\section{Project Experience}
+
+\subsection{\textbf{Trading System Development}| c++, MemoryMap, Protobuf}
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+\item Optimized performance of the existing trading system by profiling CPU and memory usage, identifying, and resolving specific issues. 
+\item Engaged in functionality development and enhancement of existing features, contributing to a stream processing framework for offline research and online feature generation.
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ Skills}
-\begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+\subsection{\textbf{Market Data Services}| C++, MemoryMap, Python, Pybind, Redis}
+\begin{itemize}
+\item Developed C++ programs to integrate stock and futures market data from multiple brokers and exchanges, writing data to Memory Map files for low-latency downstream access while ensuring data persistence.
+\item Reconstructed local order books from detailed market data, enabling downstream access to tick-level order book data.
+\item Created real-time latency monitoring and post-market analysis services to maintain market data quality.
 \end{itemize}
 
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
-
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+\subsection{\textbf{Digital Currency Trading and Risk Control Services}| Python, CCXT, Prometheus, Grafana}
+\begin{itemize}
+\item Implemented market order trading services for digital currencies, executing multiple TWAP trades based on strategy signals to achieve target positions.
+\item Integrated trading and market data services from exchanges such as Binance, FTX, and MEXC.
+\item Developed real-time account monitoring services for profit and transaction status, featuring real-time graphical displays, message and phone alerts, and automated large-scale risk control.
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+\subsection{\textbf{Futures Subjective Trading Software}| VNPY, Tornado, Python, MMap, Pybind, Redis}
+\begin{itemize}
+\item Developed subjective trading software for futures based on VNPY, supporting limit, market, and conditional orders.
+\item Built server-side applications using Tornado to manage orders across different trader accounts, integrating with existing trading system services.
+\end{itemize}
+
 \end{document}
